@@ -1,0 +1,36 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+version = '1.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+  baseName = 'nostalgiaMS'
+  version = null
+}
+
+sourceSets {
+  main {
+    java {
+      srcDirs = ["src"]
+    }
+  }
+}
+
+dependencies {
+  compile files('libs/exttools.jar',
+                'libs/jpcap.jar',
+                'libs/mina-core.jar',
+                'libs/mysql-connector-java-bin.jar',
+                'libs/slf4j-api.jar',
+                'libs/slf4j-jdk14.jar',
+  )
+}
+
+task createServer(type: Copy) {
+  dependsOn build
+  from jar
+  into "${project.projectDir}/dist"
+}
+
