@@ -4,8 +4,16 @@ This is a v62 MapleStory private server, built off of the LightMS source.
 
 ## Dependencies
 
+Installing Java JDK:
+
 ```
-sudo apt-get install mysql-server default-jdk default-jre gradle
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+```
+
+```
+sudo apt-get install mysql-server gradle
 ```
 
 ## Setup
@@ -20,9 +28,9 @@ In `Game/Configuration/world.properties`, change `channel.net.interface` to your
 
 ### Build and run the server
 
-To build the server and copy it into `dist/`:
+To clean, build the server and copy it into `dist/`:
 
 ```
-gradle createServer
+gradle clean createServer
 ```
 
