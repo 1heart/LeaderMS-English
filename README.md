@@ -9,19 +9,14 @@ Installing Java JDK:
 ```
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
-sudo apt-get install oracle-java7-installer
-sudo apt install oracle-java7-unlimited-jce-policy
-```
-
-```
-sudo apt-get install mysql-server gradle
+sudo apt-get install oracle-java7-installer oracle-java7-unlimited-jce-policy mysql-server gradle
 ```
 
 ## Setup
 
 After installing MySQL, log in and change your `root` password. Then create a database with your desired name, and run `SQL/Main.sql`.
 
-In `Game/Database/db.properties`, change `pass` to your MySQL password, and the URL to point to your chosen database name (i.e. change `.../msps/...` to your dtaabase name).
+In `Game/Database/db.properties`, change `pass` to your MySQL password, and the URL to point to your chosen database name (i.e. change `.../msps/...`).
 
 ### Configuration
 
